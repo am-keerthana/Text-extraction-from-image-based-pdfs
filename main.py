@@ -12,7 +12,7 @@ pdf2text = PDF2Text(document=pdf_document)
 content = pdf2text.extract()
 length = len(content)
 text = ''
-# print(content)
+
 for i in range(length):
     matter = content[i]["text"]
             
@@ -23,7 +23,7 @@ for i in range(length):
     text = str(text).replace("\'", "")
         
     #open text file
-    text_file = open(r"C:\Users\output.pdf", "w", encoding="utf-8")
+    text_file = open(r"C:\Users\output.txt", "w", encoding="utf-8")
         
         #write string to file
     text_file.write(text)
